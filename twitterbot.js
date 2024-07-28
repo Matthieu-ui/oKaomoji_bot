@@ -16,17 +16,18 @@ const twitterClient = new TwitterApi({
 const kaomojis = JSON.parse(fs.readFileSync('data/kaomojis.json', 'utf8'));
 
 // Define a set of random elements to add to the tweet
-const randomElements = [
-  "✨", "🌟", "🌈", "💫", "🌺", "🌻", "🔥", "💖", "🎉", "🌸",
-  "🪐", "🎆", "🔮", "🎵", "🦄", "💥", "🎨", "🌼", "🎀", "💎"
-];
+// const randomElements = [
+//   "✨", "🌟", "🌈", "💫", "🌺", "🌻", "🔥", "💖", "🎉", "🌸",
+//   "🪐", "🎆", "🔮", "🎵", "🦄", "💥", "🎨", "🌼", "🎀", "💎"
+// ];
 
 // Define a set of hashtags to include in the tweet
 const hashtags = [
-  "#cutebot", "#kaomoji","ඞ", "#cute", "#adorable", "#emoticon", 
-  "#funny", "#happy", "#smile", "#mood", "#expressions",
-  "#kawaii", "#textart","ඞ", "#creative", "#stayCreative","#awesome",
-  "#anime", "#art", "#love", "#positivity", "#basedworld", "#ILYBG","ඞ", '#kawaii'
+  "#cutebot", "#kaomoji","ඞ", "#cute", "#adOrable", "#emoticon ... #amongus ?", 
+  "#funny #FUNfun", "#happy!", "#smile :D", "#mood", "#expression",
+  "#kawaii #kawaiiAF", "#textArt","ඞ", "#creative", "#stayCreative","#awesomes",
+  "#anime", "#art", "#love", "#positivity", "#basedworld", "#ILYBG","ඞ", '#kawaii',
+  '','','','','','','','','','','', '#BRATSUMMER', "#KAOMOJI #cutebOt"
 ];
 
 // Function to post two random kaomojis with random elements and hashtags
@@ -45,8 +46,8 @@ async function postRandomKaomoji() {
     const kaomojisInSecondCategory = kaomojis[randomCategory2];
     const randomKaomoji2 = kaomojisInSecondCategory[Math.floor(Math.random() * kaomojisInSecondCategory.length)];
 
-    // Select a random element
-    const randomElement = randomElements[Math.floor(Math.random() * randomElements.length)];
+    // // Select a random element
+    // const randomElement = randomElements[Math.floor(Math.random() * randomElements.length)];
 
     // Select a few random hashtags
     const selectedHashtags = [];
@@ -58,7 +59,7 @@ async function postRandomKaomoji() {
     }
 
     // Combine the two kaomojis with the random element and hashtags
-    const tweetContent = `${randomKaomoji1} ${randomKaomoji2} ${randomElement} ${selectedHashtags.join(' ')}`;
+    const tweetContent = `${randomKaomoji1} ${randomKaomoji2} ${selectedHashtags.join(' ')}`;
 
     // Post the tweet
     await twitterClient.v2.tweet(tweetContent);
