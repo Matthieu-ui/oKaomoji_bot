@@ -27,7 +27,7 @@ const hashtags = [
   "#funny #FUNfun", "#happy!", "#smile :D", "#mood", "#expression",
   "#kawaii #kawaiiAF", "#textArt","ඞ", "#creative", "#stayCreative","#awesomes",
   "#anime", "#art", "#love", "#positivity", "#basedworld", "#ILYBG","ඞ", '#kawaii',
-  '','','','','','','','','','','', '#BRATSUMMER', "#KAOMOJI #cutebOt"
+  '','','','','','','','','','','', '#BRATSUMMER', "#KAOMOJI #cutebOt", "#SQUEE", "adorbs", "#memeMagic .. ඞ"
 ];
 
 // Function to post two random kaomojis with random elements and hashtags
