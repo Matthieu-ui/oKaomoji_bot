@@ -1,0 +1,16 @@
+{
+    "name": "kaomoji-bot",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "node twitterbot.js"
+    },
+    "engines": {
+      "node": "16.x"
+    },
+    "dependencies": {
+      "dotenv": "^16.4.5",
+      "twitter-api-v2": "^1.17.2",
+      "node-schedule": "^2.1.1"
+    }
+  }
+  
