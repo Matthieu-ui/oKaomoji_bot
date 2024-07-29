@@ -23,11 +23,11 @@ const kaomojis = JSON.parse(fs.readFileSync('data/kaomojis.json', 'utf8'));
 
 // Define a set of hashtags to include in the tweet
 const hashtags = [
-  "#cutebot", "#kaomoji","ඞ", "#cute", "#adOrable", "#emoticon ... #amongus ?", 
-  "#funny #FUNfun", "#happy!", "#smile :D", "#mood", "#expression",
-  "#kawaii #kawaiiAF", "#textArt","ඞ", "#creative", "#stayCreative","#awesomes",
-  "#anime", "#art", "#love", "#positivity", "#basedworld", "#ILYBG","ඞ", '#kawaii',
-  '','','','','','','','','','','', '#BRATSUMMER', "#KAOMOJI #cutebOt", "#SQUEE", "adorbs", "#memeMagic .. ඞ"
+  "#cutebot ∠( ᐛ 」∠)＿", "#kaomoji","ඞ .. ඞ ...... ඞ", "#cute (ㅅ´ ˘ `)", "#adOrable (..◜ᴗ◝..)", "#amongus ????? (ᵕ—ᴗ—)", 
+  "#funtimes ^._.^ฅ", "( •̯́ ₃ •̯̀) #happy! (｡•́︿•̀｡)(╥﹏╥)", "#smiles ˙ᵕ˙", "#mood ∠( ᐛ 」∠)＿", "#expression ( •̀ - •́ )",
+  "#kawaii (⸝⸝ᴗ﹏ᴗ⸝⸝) ᶻ 𝗓 𐰁 #kawaiiAF ᕙ( •̀ ᗜ •́ )ᕗ", "(｡- .•) #textArt ?","ඞ", "#creative (*ᴗ͈ˬᴗ͈)ꕤ*.ﾟ", "#stayCreative ᕕ( ᐕ )ᕗ","#awesome ☆⸜(｡˃ ᵕ ˂ )⸝☆",
+  "#anime", "#art ദ്ദി ˉ͈̀꒳ˉ͈́ )✧", "#love ⸜(｡˃ ᵕ ˂ )⸝♡", "#positivity ˊᵕˋ", "#basedworld", "#ILYBG ♡ ","♡ .. ඞ", '(∩˃o˂∩)♡ #kawaii ♡ ♡ ♡ ',
+  '','','','','','','','','','','', '#BRATSUMMER (❁˃́ᴗ˂̀)(≧ᴗ≦✿)', "#KAOMOJI #cutebOt >ᴗ<", "#SQUEE >ᴗ<", "#adorbs (ㅅ´ ˘ `)", "i ♡ #memeMagic .. ඞ"
 ];
 
 // Function to post two random kaomojis with random elements and hashtags
