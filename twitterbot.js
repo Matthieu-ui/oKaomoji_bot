@@ -73,4 +73,4 @@ async function postRandomKaomoji() {
 // postRandomKaomoji();
 
 // Schedule future tweets
-schedule.scheduleJob('0 * * * *', postRandomKaomoji);
+schedule.scheduleJob('0 */3 * * *', postRandomKaomoji);
