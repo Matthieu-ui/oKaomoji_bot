@@ -28,4 +28,4 @@ jobs:
 
     - name: Deploy to DigitalOcean
       run: |
-        rsync -avz --delete ./ user@your_droplet_ip:/path/to/project
+        rsync -avz --delete ./ user@your_droplet_ip:/oKaomoji_bot
