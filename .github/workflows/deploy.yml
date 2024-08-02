@@ -24,7 +24,7 @@ jobs:
 
     - name: Build project
       run: |
-        npm run build
+        npm start
 
     - name: Deploy to DigitalOcean
       run: |
