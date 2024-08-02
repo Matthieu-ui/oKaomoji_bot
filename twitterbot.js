@@ -72,7 +72,7 @@ async function postRandomKaomoji() {
 // // Post a tweet immediately
 // postRandomKaomoji();
 
-console.log(i am still here..∠( ᐛ 」∠)＿)
+console.log("I am still here .. ∠( ᐛ 」∠)＿")
 
 // Schedule future tweets
 schedule.scheduleJob('0 */3 * * *', postRandomKaomoji);
