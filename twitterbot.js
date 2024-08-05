@@ -75,4 +75,4 @@ async function postRandomKaomoji() {
 console.log("I am still here .. ∠( ᐛ 」∠)＿")
 
 // Schedule future tweets
-schedule.scheduleJob('0 */3 * * *', postRandomKaomoji);
+schedule.scheduleJob('0 * * * *', postRandomKaomoji);
