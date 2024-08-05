@@ -5,7 +5,7 @@
       "start": "node twitterbot.js"
     },
     "engines": {
-      "node": "16.x"
+      "node": "18.x"
     },
     "dependencies": {
       "dotenv": "^16.4.5",
