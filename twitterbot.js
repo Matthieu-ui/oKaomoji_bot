@@ -56,7 +56,7 @@ async function postRandomKaomoji() {
 
 console.log("I am still here .. ∠( ᐛ 」∠)＿");
 
-schedule.scheduleJob('0 * * * *', () => {
+schedule.scheduleJob('10 /2 * * *', () => {
   console.log('Scheduled job triggered at', new Date().toISOString());
   postRandomKaomoji();
 });
