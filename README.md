@@ -31,15 +31,23 @@ PM2 commands are used to start, stop, restart, reload, list, and monitor applica
 
 Some common PM2 commands are:
 
-`pm2 start app.js: start an application`
-`pm2 restart app_name: restart an application`
-`pm2 reload app_name: reload an application`
-`pm2 stop app_name: stop an application`
-`pm2 delete app_name: delete an application`
-`pm2 list: list the status of all applications`
-`pm2 logs: display logs in realtime`
-`pm2 monit: display a terminal based dashboard`
-`pm2 plus: display a web based dashboard`
+`pm2 start app.js` : start an application
+
+`pm2 restart app_name` : restart an application
+
+`pm2 reload app_name` : reload an application
+
+`pm2 stop app_name` : stop an application
+
+`pm2 delete app_name` : delete an application
+
+`pm2 list` : list the status of all applications
+
+`pm2 logs` : display logs in realtime
+
+`pm2 monit` : display a terminal based dashboard
+
+`pm2 plus` : display a web based dashboard
 
 
 
