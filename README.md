@@ -27,20 +27,19 @@ ACCESS_TOKEN_SECRET=your-access-token-secret
 
 Host wherever is clever.
 
-node process manager needed to keep bot running.
+PM2 commands are used to start, stop, restart, reload, list, and monitor applications in background.
 
-PM2 commands are used to start, stop, restart, reload, list, and monitor applications in background123.
+Some common PM2 commands are:
 
-Some common PM2 commands are123:
-pm2 start app.js: start an application
-pm2 restart app_name: restart an application
-pm2 reload app_name: reload an application
-pm2 stop app_name: stop an application
-pm2 delete app_name: delete an application
-pm2 list: list the status of all applications
-pm2 logs: display logs in realtime
-pm2 monit: display a terminal based dashboard
-pm2 plus: display a web based dashboard
+`pm2 start app.js: start an application`
+`pm2 restart app_name: restart an application`
+`pm2 reload app_name: reload an application`
+`pm2 stop app_name: stop an application`
+`pm2 delete app_name: delete an application`
+`pm2 list: list the status of all applications`
+`pm2 logs: display logs in realtime`
+`pm2 monit: display a terminal based dashboard`
+`pm2 plus: display a web based dashboard`
 
 
 
