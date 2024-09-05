@@ -19,36 +19,20 @@ try {
   process.exit(1);
 }
 
-const hashtags = [
-"ʕ•ᴥ•ʔ", "₍ᐢ•ﻌ•ᐢ₎", "(❁´◡❁)", "૮( ˶ᵔ ᵕ ᵔ˶)ა", "꒰˶• ༝ •˶꒱", "(´｡• ᵕ •｡)", "(•̀ᴗ•́*)و", "꒰ᐢ• ‧̫ •ᐢ꒱",
-"( •᷄⌓•᷅ )", "(≧▽≦)", "૮₍˶• . •˶₎ა", "(づ｡◕‿‿◕｡)づ", "(≧ω≦)", "(๑˃ᴗ˂)ﻭ", "(◜◒◝)", "✧(｡•̀ᴗ-)✧",
-"ෆ⃛(੭ु´͈ ᐜ ͈)੭ु⁾⁾", "( •́ ◡ •̀ )", "꒰⌗´͈ ᵕ ॣ͈⌗꒱", "°˖✧◝(⁰▿⁰)◜✧˖°", "◟( ˘ ³˘)◞", "૮₍｡• – •｡₎ა", "꒰´ ˘ `꒱",
-"(◠‿◠✿)", "٩(｡•́‿•̀｡)۶", "(╯✧∇✧)╯", "٩(｡•ㅅ•｡)و", "(≧∀≦)", "( •̀ᴗ•́ )و ̑̑", "ヽ(⌒‿⌒)", "(｡♥‿♥｡)",
-"∩(︶▽︶)∩", "(♡°▽°♡)", "(⋆‿⋆)", "✩°｡⋆⸜(ू˃̣̣̣̣̣̣︿˂̣̣̣̣̣̣ ू)⸝", "(ฅ⁍̴̀◊⁍̴́)و ̑̑", "( ˘▽˘)っ♨", "(˘⌣˘)♡(˘⌣˘)",
-"૮₍⁄⁄˶• ᴥ •˶⁄⁄₎ა", "(๑´ლ`๑)", "(ᵔᴥᵔ)", "(⸝⸝⸝╹◡╹)╭", "(灬º‿º灬)♡", "(≧∇≦)", "(っ- ‸ – ς)", "ヽ(o＾▽＾o)ノ",
-"(〃＾▽＾〃)", "⸜( *´ᗜ )⸝", "(´∀)", "(˶‾᷄ ⁻̫ ‾᷅˵)", "(｡♥‿♥｡)", "(๑>ᴗ<๑)", "☆～（ゝ。∂）", "ʕ♡˙ᴥ˙♡ʔ", "✧ #oKaomoji ✧", 
-];
-
 async function postRandomKaomoji() {
   try {
     const categories = Object.keys(kaomojis);
-    const randomCategory1 = categories[Math.floor(Math.random() * categories.length)];
-    const kaomojiList1 = kaomojis[randomCategory1];
-    const randomKaomoji1 = kaomojiList1[Math.floor(Math.random() * kaomojiList1.length)];
+    const numberOfKaomojis = Math.floor(Math.random() * 5) + 1; // Randomly select 1 to 5 kaomojis
+    const selectedKaomojis = [];
 
-    const randomCategory2 = categories[Math.floor(Math.random() * categories.length)];
-    const kaomojisInSecondCategory = kaomojis[randomCategory2];
-    const randomKaomoji2 = kaomojisInSecondCategory[Math.floor(Math.random() * kaomojisInSecondCategory.length)];
-
-    const selectedHashtags = [];
-    for (let i = 0; i < 1; i++) {
-      const randomHashtag = hashtags[Math.floor(Math.random() * hashtags.length)];
-      if (!selectedHashtags.includes(randomHashtag)) {
-        selectedHashtags.push(randomHashtag);
-      }
+    for (let i = 0; i < numberOfKaomojis; i++) {
+      const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+      const kaomojiList = kaomojis[randomCategory];
+      const randomKaomoji = kaomojiList[Math.floor(Math.random() * kaomojiList.length)];
+      selectedKaomojis.push(randomKaomoji);
     }
 
-    const tweetContent = `${randomKaomoji1} ${randomKaomoji2} ${selectedHashtags.join(' ')}`;
+    const tweetContent = selectedKaomojis.join(' ');
     await twitterClient.v2.tweet(tweetContent);
     console.log(`Tweet sent successfully: ${tweetContent}`);
   } catch (error) {
@@ -58,7 +42,10 @@ async function postRandomKaomoji() {
 
 console.log("I am still here .. ∠( ᐛ 」∠)＿");
 
-schedule.scheduleJob('10 /2 * * *', () => {
+schedule.scheduleJob('0 * * * *', () => { // posts every hour 
   console.log('Scheduled job triggered at', new Date().toISOString());
   postRandomKaomoji();
 });
+
+
+
